@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var books: [DoubanBookModel]?
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    @IBAction func searchPressed(sender: AnyObject) {
+        SeachServices.searchDouban(keywords: searchTextField.text, sucessBlock: { (books) -> () in
+            self.books = books
+            self.performSegueWithIdentifier("showSearchResult", sender: nil)
+            }) { (error) -> () in
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +31,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showSearchResult" {
+            var searchResultVC = segue.destinationViewController as SearchResultViewController
+            searchResultVC.books = self.books
+        }
+    }
 
 }
 

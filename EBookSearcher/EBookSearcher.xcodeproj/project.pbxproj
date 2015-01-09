@@ -15,6 +15,11 @@
 		3B78EFC31A5F6E8C0021D538 /* EBookSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFC21A5F6E8C0021D538 /* EBookSearcherTests.swift */; };
 		3B78EFD81A5F707B0021D538 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EFD21A5F70360021D538 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B78EFEA1A5F71700021D538 /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EFE11A5F71560021D538 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B78EFEE1A5F74350021D538 /* SeachServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFED1A5F74350021D538 /* SeachServices.swift */; };
+		3B78EFF01A5F7AB60021D538 /* DoubanBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */; };
+		3B78EFF21A5F7B030021D538 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF11A5F7B030021D538 /* BaseModel.swift */; };
+		3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */; };
+		3B78EFF61A5FA9030021D538 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +116,11 @@
 		3B78EFC21A5F6E8C0021D538 /* EBookSearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBookSearcherTests.swift; sourceTree = "<group>"; };
 		3B78EFCC1A5F70360021D538 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		3B78EFED1A5F74350021D538 /* SeachServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachServices.swift; sourceTree = "<group>"; };
+		3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBookModel.swift; sourceTree = "<group>"; };
+		3B78EFF11A5F7B030021D538 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,12 +164,16 @@
 		3B78EFA91A5F6E8C0021D538 /* EBookSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				3B78EFEC1A5F72CD0021D538 /* Model */,
+				3B78EFEB1A5F72C30021D538 /* Services */,
 				3B78EFAC1A5F6E8C0021D538 /* AppDelegate.swift */,
 				3B78EFAE1A5F6E8C0021D538 /* ViewController.swift */,
 				3B78EFB01A5F6E8C0021D538 /* Main.storyboard */,
 				3B78EFB31A5F6E8C0021D538 /* Images.xcassets */,
 				3B78EFB51A5F6E8C0021D538 /* LaunchScreen.xib */,
 				3B78EFAA1A5F6E8C0021D538 /* Supporting Files */,
+				3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */,
+				3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */,
 			);
 			path = EBookSearcher;
 			sourceTree = "<group>";
@@ -207,6 +221,23 @@
 				3B78EFE71A5F71560021D538 /* SwiftyJSONOSXTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3B78EFEB1A5F72C30021D538 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3B78EFED1A5F74350021D538 /* SeachServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		3B78EFEC1A5F72CD0021D538 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */,
+				3B78EFF11A5F7B030021D538 /* BaseModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,8 +398,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B78EFF61A5FA9030021D538 /* SearchResultCell.swift in Sources */,
 				3B78EFAF1A5F6E8C0021D538 /* ViewController.swift in Sources */,
+				3B78EFF01A5F7AB60021D538 /* DoubanBookModel.swift in Sources */,
 				3B78EFAD1A5F6E8C0021D538 /* AppDelegate.swift in Sources */,
+				3B78EFEE1A5F74350021D538 /* SeachServices.swift in Sources */,
+				3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */,
+				3B78EFF21A5F7B030021D538 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +606,7 @@
 				3B78EFC81A5F6E8C0021D538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B78EFC91A5F6E8C0021D538 /* Build configuration list for PBXNativeTarget "EBookSearcherTests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +615,7 @@
 				3B78EFCB1A5F6E8C0021D538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
