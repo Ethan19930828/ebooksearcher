@@ -14,12 +14,15 @@
 		3B78EFB71A5F6E8C0021D538 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78EFB51A5F6E8C0021D538 /* LaunchScreen.xib */; };
 		3B78EFC31A5F6E8C0021D538 /* EBookSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFC21A5F6E8C0021D538 /* EBookSearcherTests.swift */; };
 		3B78EFD81A5F707B0021D538 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EFD21A5F70360021D538 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3B78EFEA1A5F71700021D538 /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EFE11A5F71560021D538 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B78EFEE1A5F74350021D538 /* SeachServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFED1A5F74350021D538 /* SeachServices.swift */; };
 		3B78EFF01A5F7AB60021D538 /* DoubanBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */; };
 		3B78EFF21A5F7B030021D538 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF11A5F7B030021D538 /* BaseModel.swift */; };
 		3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */; };
 		3B78EFF61A5FA9030021D538 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */; };
+		3B78F0041A5FCD020021D538 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78F0031A5FCD020021D538 /* BookDetailViewController.swift */; };
+		3BC06E211A62A289004FECBC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC06E201A62A289004FECBC /* BaseViewController.swift */; };
+		3BC06E271A62AACF004FECBC /* DuokanBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC06E261A62AACF004FECBC /* DuokanBookModel.swift */; };
+		3BC06E291A62AB15004FECBC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,41 +54,6 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = Alamofire;
 		};
-		3B78EFE01A5F71560021D538 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
-			remoteInfo = SwiftyJSON;
-		};
-		3B78EFE21A5F71560021D538 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2E4FEFE619575BE100351305;
-			remoteInfo = SwiftyJSONTests;
-		};
-		3B78EFE41A5F71560021D538 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EC1C1C91A0C1A2D0026ED0B;
-			remoteInfo = SwiftyJSONOSX;
-		};
-		3B78EFE61A5F71560021D538 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EC1C1D31A0C1A2D0026ED0B;
-			remoteInfo = SwiftyJSONOSXTests;
-		};
-		3B78EFE81A5F71650021D538 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
-			remoteInfo = SwiftyJSON;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,7 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3B78EFEA1A5F71700021D538 /* SwiftyJSON.framework in Copy Frameworks */,
 				3B78EFD81A5F707B0021D538 /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -115,12 +82,15 @@
 		3B78EFC11A5F6E8C0021D538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B78EFC21A5F6E8C0021D538 /* EBookSearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBookSearcherTests.swift; sourceTree = "<group>"; };
 		3B78EFCC1A5F70360021D538 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		3B78EFED1A5F74350021D538 /* SeachServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachServices.swift; sourceTree = "<group>"; };
 		3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBookModel.swift; sourceTree = "<group>"; };
 		3B78EFF11A5F7B030021D538 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		3B78F0031A5FCD020021D538 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		3BC06E201A62A289004FECBC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3BC06E261A62AACF004FECBC /* DuokanBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuokanBookModel.swift; sourceTree = "<group>"; };
+		3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +114,6 @@
 		3B78EF9E1A5F6E8C0021D538 = {
 			isa = PBXGroup;
 			children = (
-				3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */,
 				3B78EFCC1A5F70360021D538 /* Alamofire.xcodeproj */,
 				3B78EFA91A5F6E8C0021D538 /* EBookSearcher */,
 				3B78EFBF1A5F6E8C0021D538 /* EBookSearcherTests */,
@@ -164,16 +133,15 @@
 		3B78EFA91A5F6E8C0021D538 /* EBookSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */,
+				3B78F0051A5FCD090021D538 /* ViewControllers */,
 				3B78EFEC1A5F72CD0021D538 /* Model */,
 				3B78EFEB1A5F72C30021D538 /* Services */,
 				3B78EFAC1A5F6E8C0021D538 /* AppDelegate.swift */,
-				3B78EFAE1A5F6E8C0021D538 /* ViewController.swift */,
 				3B78EFB01A5F6E8C0021D538 /* Main.storyboard */,
 				3B78EFB31A5F6E8C0021D538 /* Images.xcassets */,
 				3B78EFB51A5F6E8C0021D538 /* LaunchScreen.xib */,
 				3B78EFAA1A5F6E8C0021D538 /* Supporting Files */,
-				3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */,
-				3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */,
 			);
 			path = EBookSearcher;
 			sourceTree = "<group>";
@@ -212,17 +180,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B78EFDA1A5F71560021D538 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3B78EFE11A5F71560021D538 /* SwiftyJSON.framework */,
-				3B78EFE31A5F71560021D538 /* SwiftyJSONTests.xctest */,
-				3B78EFE51A5F71560021D538 /* SwiftyJSON.framework */,
-				3B78EFE71A5F71560021D538 /* SwiftyJSONOSXTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3B78EFEB1A5F72C30021D538 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +193,21 @@
 			children = (
 				3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */,
 				3B78EFF11A5F7B030021D538 /* BaseModel.swift */,
+				3BC06E261A62AACF004FECBC /* DuokanBookModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		3B78F0051A5FCD090021D538 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BC06E201A62A289004FECBC /* BaseViewController.swift */,
+				3B78EFAE1A5F6E8C0021D538 /* ViewController.swift */,
+				3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */,
+				3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */,
+				3B78F0031A5FCD020021D538 /* BookDetailViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +225,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3B78EFE91A5F71650021D538 /* PBXTargetDependency */,
 				3B78EFD61A5F70540021D538 /* PBXTargetDependency */,
 			);
 			name = EBookSearcher;
@@ -315,10 +284,6 @@
 					ProductGroup = 3B78EFCD1A5F70360021D538 /* Products */;
 					ProjectRef = 3B78EFCC1A5F70360021D538 /* Alamofire.xcodeproj */;
 				},
-				{
-					ProductGroup = 3B78EFDA1A5F71560021D538 /* Products */;
-					ProjectRef = 3B78EFD91A5F71560021D538 /* SwiftyJSON.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -341,34 +306,6 @@
 			fileType = wrapper.cfbundle;
 			path = AlamofireTests.xctest;
 			remoteRef = 3B78EFD31A5F70360021D538 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3B78EFE11A5F71560021D538 /* SwiftyJSON.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftyJSON.framework;
-			remoteRef = 3B78EFE01A5F71560021D538 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3B78EFE31A5F71560021D538 /* SwiftyJSONTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftyJSONTests.xctest;
-			remoteRef = 3B78EFE21A5F71560021D538 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3B78EFE51A5F71560021D538 /* SwiftyJSON.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftyJSON.framework;
-			remoteRef = 3B78EFE41A5F71560021D538 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3B78EFE71A5F71560021D538 /* SwiftyJSONOSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftyJSONOSXTests.xctest;
-			remoteRef = 3B78EFE61A5F71560021D538 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -401,8 +338,12 @@
 				3B78EFF61A5FA9030021D538 /* SearchResultCell.swift in Sources */,
 				3B78EFAF1A5F6E8C0021D538 /* ViewController.swift in Sources */,
 				3B78EFF01A5F7AB60021D538 /* DoubanBookModel.swift in Sources */,
+				3BC06E291A62AB15004FECBC /* SwiftyJSON.swift in Sources */,
 				3B78EFAD1A5F6E8C0021D538 /* AppDelegate.swift in Sources */,
+				3BC06E271A62AACF004FECBC /* DuokanBookModel.swift in Sources */,
 				3B78EFEE1A5F74350021D538 /* SeachServices.swift in Sources */,
+				3BC06E211A62A289004FECBC /* BaseViewController.swift in Sources */,
+				3B78F0041A5FCD020021D538 /* BookDetailViewController.swift in Sources */,
 				3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */,
 				3B78EFF21A5F7B030021D538 /* BaseModel.swift in Sources */,
 			);
@@ -428,11 +369,6 @@
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			targetProxy = 3B78EFD51A5F70540021D538 /* PBXContainerItemProxy */;
-		};
-		3B78EFE91A5F71650021D538 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			targetProxy = 3B78EFE81A5F71650021D538 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -540,6 +476,7 @@
 				INFOPLIST_FILE = EBookSearcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf243f91-499b-46ff-843d-eaa95629c982";
 			};
 			name = Debug;
 		};
@@ -550,6 +487,7 @@
 				INFOPLIST_FILE = EBookSearcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf243f91-499b-46ff-843d-eaa95629c982";
 			};
 			name = Release;
 		};

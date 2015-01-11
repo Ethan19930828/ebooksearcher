@@ -8,17 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
-    var books: [DoubanBookModel]?
+    var doubanBooks: [DoubanBookModel]?
+    var duokanBooks: [DuokanBookModel]?
+    
     @IBOutlet weak var searchTextField: UITextField!
     
     @IBAction func searchPressed(sender: AnyObject) {
+        self.showLoading()
         SeachServices.searchDouban(keywords: searchTextField.text, sucessBlock: { (books) -> () in
-            self.books = books
-            self.performSegueWithIdentifier("showSearchResult", sender: nil)
+                self.doubanBooks = books
+                self.searchDuokan()
             }) { (error) -> () in
+                self.searchDuokan()
         }
+    }
+    
+    func searchDuokan() {
+        SeachServices.searchDuokan(keywords: searchTextField.text, sucessBlock: { (duokanbooks) -> () in
+            self.duokanBooks = duokanbooks
+            self.searchAmazon()
+        }) { (error) -> () in
+            self.searchAmazon()
+        }
+    }
+    
+    func searchAmazon() {
+        self.hideLoading()
+        self.performSegueWithIdentifier("showSearchResult", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -34,7 +52,10 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showSearchResult" {
             var searchResultVC = segue.destinationViewController as SearchResultViewController
-            searchResultVC.books = self.books
+            searchResultVC.doubanBooks = self.doubanBooks
+            searchResultVC.duokanBooks = self.duokanBooks
+            searchResultVC.keywords = searchTextField.text
+            searchResultVC.title = "搜索:( \(searchTextField.text) )"
         }
     }
 

@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 public typealias SearchDoubanSucessBlock = ([DoubanBookModel]) -> ()
+public typealias SearchDuokanSucessBlock = ([DuokanBookModel]) -> ()
+
 public typealias APIFailBlock = (NSError?) -> ()
 
 public class SeachServices: NSObject {
@@ -32,6 +34,25 @@ public class SeachServices: NSObject {
                 sucessBlock? (books)
             }
             
+        }
+    }
+    
+    public class func searchDuokan(#keywords: NSString, sucessBlock: SearchDuokanSucessBlock?, failBlock: APIFailBlock?) {
+        var url = "http://book.duokan.com/store/v0/ios/search?start=0&page_length=100"
+        
+        Alamofire.request(.GET, url, parameters: ["s": keywords], encoding: .URL).response { (request, response, data, error) -> Void in
+            println(request)
+            println(response)
+            
+            if error != nil {
+                failBlock? (error)
+                return
+            }
+            
+            if let jsonData = data as? NSData {
+                var books = DuokanBookModel.modelsFromResponse(jsonData)
+                sucessBlock? (books)
+            }
         }
     }
 }
