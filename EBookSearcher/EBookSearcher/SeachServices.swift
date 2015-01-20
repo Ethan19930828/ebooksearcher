@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 public typealias SearchDoubanSucessBlock = ([DoubanBookModel]) -> ()
 public typealias SearchDuokanSucessBlock = ([DuokanBookModel]) -> ()

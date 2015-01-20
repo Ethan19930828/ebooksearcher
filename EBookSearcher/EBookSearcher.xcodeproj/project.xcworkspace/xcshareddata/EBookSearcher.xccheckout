@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EEA92D63-21A0-4AD2-B345-BD2CBA959E80</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EBookSearcher</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
+		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
+		<string>https://github.com/SwiftyJSON/SwiftyJSON.git</string>
+		<key>E499A62470166E1FE29FEDEA3BB97922649359F0</key>
+		<string>bitbucket.org:miaomaocat/ebooksearcher.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EBookSearcher/EBookSearcher.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../../..EBookSearcher/Alamofire</string>
+		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
+		<string>../../..EBookSearcher/SwiftyJSON</string>
+		<key>E499A62470166E1FE29FEDEA3BB97922649359F0</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>bitbucket.org:miaomaocat/ebooksearcher.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E499A62470166E1FE29FEDEA3BB97922649359F0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E499A62470166E1FE29FEDEA3BB97922649359F0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ebooksearcher</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftyJSON</string>
+		</dict>
+	</array>
+</dict>
+</plist>

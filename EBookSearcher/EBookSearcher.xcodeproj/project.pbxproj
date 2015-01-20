@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B18E5E51A6D41C20030C46C /* UIViewController+ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18E5E41A6D41C20030C46C /* UIViewController+ProgressHUD.swift */; };
+		3B18E5FE1A6E0D930030C46C /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18E5FD1A6E0D930030C46C /* UIImageView+URL.swift */; };
 		3B78EFAD1A5F6E8C0021D538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFAC1A5F6E8C0021D538 /* AppDelegate.swift */; };
 		3B78EFAF1A5F6E8C0021D538 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFAE1A5F6E8C0021D538 /* ViewController.swift */; };
 		3B78EFB21A5F6E8C0021D538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B78EFB01A5F6E8C0021D538 /* Main.storyboard */; };
@@ -20,7 +22,6 @@
 		3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */; };
 		3B78EFF61A5FA9030021D538 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */; };
 		3B78F0041A5FCD020021D538 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78F0031A5FCD020021D538 /* BookDetailViewController.swift */; };
-		3BC06E211A62A289004FECBC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC06E201A62A289004FECBC /* BaseViewController.swift */; };
 		3BC06E271A62AACF004FECBC /* DuokanBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC06E261A62AACF004FECBC /* DuokanBookModel.swift */; };
 		3BC06E291A62AB15004FECBC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B18E5E41A6D41C20030C46C /* UIViewController+ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ProgressHUD.swift"; sourceTree = "<group>"; };
+		3B18E5FD1A6E0D930030C46C /* UIImageView+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 		3B78EFA71A5F6E8C0021D538 /* EBookSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EBookSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B78EFAB1A5F6E8C0021D538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B78EFAC1A5F6E8C0021D538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 		3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		3B78F0031A5FCD020021D538 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
-		3BC06E201A62A289004FECBC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3BC06E261A62AACF004FECBC /* DuokanBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuokanBookModel.swift; sourceTree = "<group>"; };
 		3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B18E5FF1A6E0D9C0030C46C /* category */ = {
+			isa = PBXGroup;
+			children = (
+				3B18E5E41A6D41C20030C46C /* UIViewController+ProgressHUD.swift */,
+				3B18E5FD1A6E0D930030C46C /* UIImageView+URL.swift */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		3B18E6001A6E0E720030C46C /* dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */,
+			);
+			name = dependencies;
+			sourceTree = "<group>";
+		};
 		3B78EF9E1A5F6E8C0021D538 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +152,8 @@
 		3B78EFA91A5F6E8C0021D538 /* EBookSearcher */ = {
 			isa = PBXGroup;
 			children = (
-				3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */,
+				3B18E6001A6E0E720030C46C /* dependencies */,
+				3B18E5FF1A6E0D9C0030C46C /* category */,
 				3B78F0051A5FCD090021D538 /* ViewControllers */,
 				3B78EFEC1A5F72CD0021D538 /* Model */,
 				3B78EFEB1A5F72C30021D538 /* Services */,
@@ -201,7 +221,6 @@
 		3B78F0051A5FCD090021D538 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3BC06E201A62A289004FECBC /* BaseViewController.swift */,
 				3B78EFAE1A5F6E8C0021D538 /* ViewController.swift */,
 				3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */,
 				3B78EFF51A5FA9030021D538 /* SearchResultCell.swift */,
@@ -338,11 +357,12 @@
 				3B78EFF61A5FA9030021D538 /* SearchResultCell.swift in Sources */,
 				3B78EFAF1A5F6E8C0021D538 /* ViewController.swift in Sources */,
 				3B78EFF01A5F7AB60021D538 /* DoubanBookModel.swift in Sources */,
+				3B18E5E51A6D41C20030C46C /* UIViewController+ProgressHUD.swift in Sources */,
 				3BC06E291A62AB15004FECBC /* SwiftyJSON.swift in Sources */,
+				3B18E5FE1A6E0D930030C46C /* UIImageView+URL.swift in Sources */,
 				3B78EFAD1A5F6E8C0021D538 /* AppDelegate.swift in Sources */,
 				3BC06E271A62AACF004FECBC /* DuokanBookModel.swift in Sources */,
 				3B78EFEE1A5F74350021D538 /* SeachServices.swift in Sources */,
-				3BC06E211A62A289004FECBC /* BaseViewController.swift in Sources */,
 				3B78F0041A5FCD020021D538 /* BookDetailViewController.swift in Sources */,
 				3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */,
 				3B78EFF21A5F7B030021D538 /* BaseModel.swift in Sources */,

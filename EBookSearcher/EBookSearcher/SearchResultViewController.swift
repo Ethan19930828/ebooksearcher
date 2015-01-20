@@ -9,21 +9,7 @@
 import UIKit
 import Alamofire
 
-extension UIImageView {
-    
-    public func HC_SetImageWithURL(url: String) {
-        Alamofire.request(.GET, url, parameters: nil, encoding: .URL).response { (request, response, data, error) -> Void in
-            if let imageData = data as? NSData {
-                var image = UIImage(data: imageData)
-                self.image = image
-                self.setNeedsDisplay()
-            }
-        }
-    }
-}
-
-
-public class SearchResultViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let doubanButtonIndex = 0
     let duokanButtonIndex = 1
@@ -37,12 +23,12 @@ public class SearchResultViewController: BaseViewController, UITableViewDelegate
     var selectedResultSet = 0
     
     @IBOutlet weak var tableview: UITableView!
-    public var doubanBooks: [DoubanBookModel]?
-    public var duokanBooks: [DuokanBookModel]?
-    public var keywords: NSString?
+    var doubanBooks: [DoubanBookModel]?
+    var duokanBooks: [DuokanBookModel]?
+    var keywords: NSString?
     
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview.delegate = self
         self.tableview.dataSource = self
@@ -52,18 +38,18 @@ public class SearchResultViewController: BaseViewController, UITableViewDelegate
         self.duokanButton.setTitle("多看(\(self.duokanBooks!.count))", forState: UIControlState.Normal)
     }
 
-    public override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if selectedResultSet == doubanButtonIndex {
             return self.doubanBooks!.count
         } else if selectedResultSet == duokanButtonIndex {
@@ -73,7 +59,7 @@ public class SearchResultViewController: BaseViewController, UITableViewDelegate
         return 0
     }
 
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as SearchResultCell
 
@@ -83,21 +69,22 @@ public class SearchResultViewController: BaseViewController, UITableViewDelegate
             // Configure the cell...
             cell.titleLabel.text = book.title!
             cell.subtitleLabel.text = book.abstract!
-            cell.coverImageView.HC_SetImageWithURL(book.cover!)
+            cell.coverImageView.mm_setImageWithURL(book.cover!)
+            
         } else if selectedResultSet == duokanButtonIndex {
             var book = self.duokanBooks![indexPath.row]
             
             // Configure the cell...
             cell.titleLabel.text = book.title!
             cell.subtitleLabel.text = book.abstract!
-            cell.coverImageView.HC_SetImageWithURL(book.cover!)
+            cell.coverImageView.mm_setImageWithURL(book.cover!)
         }
 
 
         return cell
     }
     
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if selectedResultSet == doubanButtonIndex {
             var book = self.doubanBooks![indexPath.row]
             self.performSegueWithIdentifier("showBookDetail", sender: book)
@@ -107,7 +94,7 @@ public class SearchResultViewController: BaseViewController, UITableViewDelegate
         }
     }
     
-    public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // amazon
         if sender == nil && self.keywords != nil {

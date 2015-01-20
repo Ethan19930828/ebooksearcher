@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class ViewController: UIViewController {
 
     var doubanBooks: [DoubanBookModel]?
     var duokanBooks: [DuokanBookModel]?
@@ -16,7 +16,7 @@ class ViewController: BaseViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     @IBAction func searchPressed(sender: AnyObject) {
-        self.showLoading()
+        self.mm_showLoading("正在搜索...")
         SeachServices.searchDouban(keywords: searchTextField.text, sucessBlock: { (books) -> () in
                 self.doubanBooks = books
                 self.searchDuokan()
@@ -35,7 +35,7 @@ class ViewController: BaseViewController {
     }
     
     func searchAmazon() {
-        self.hideLoading()
+        self.mm_hideLoading()
         self.performSegueWithIdentifier("showSearchResult", sender: nil)
     }
     

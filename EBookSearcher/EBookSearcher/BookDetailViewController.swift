@@ -7,23 +7,37 @@
 //
 
 import UIKit
-
-public class BookDetailViewController: UIViewController {
+ class BookDetailViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webview: UIWebView!
-    public var url: NSString?
+    var url: NSString?
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         if self.url != nil {
             var request = NSURLRequest(URL: NSURL(string: self.url!)!)
             self.webview.loadRequest(request)
+            self.webview.delegate = self
         }
     }
 
-    public override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: WebviewDelegate
+    func webViewDidStartLoad(webView: UIWebView) {
+        self.mm_showLoading("正在加载...")
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        self.mm_hideLoading()
+    }
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+        self.mm_hideLoading()
+        self.mm_showError(error.description)
     }
 
 }
