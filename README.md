@@ -12,7 +12,7 @@ write in swift for fun.
 
 ![screenshot1](https://raw.githubusercontent.com/miaomaocat/ebooksearcher/master/screenshot/3.PNG)
 
-![screenshot1](https://raw.githubusercontent.com/miaomaocat/ebooksearcher/master/screenshot/4.png)
+![screenshot1](https://raw.githubusercontent.com/miaomaocat/ebooksearcher/master/screenshot/4.jpeg)
 
 ## License
 MIT
