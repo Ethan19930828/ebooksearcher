@@ -1,6 +1,3 @@
 [submodule "EBookSearcher/Alamofire"]
 	path = EBookSearcher/Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
-[submodule "EBookSearcher/SwiftyJSON"]
-	path = EBookSearcher/SwiftyJSON
-	url = https://github.com/SwiftyJSON/SwiftyJSON.git
