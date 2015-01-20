@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBAction func searchPressed(sender: AnyObject) {
         self.mm_showLoading("正在搜索...")
-        SeachServices.searchDouban(keywords: searchTextField.text, sucessBlock: { (books) -> () in
+        SearchService.searchDouban(keywords: searchTextField.text, sucessBlock: { (books) -> () in
                 self.doubanBooks = books
                 self.searchDuokan()
             }) { (error) -> () in
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     func searchDuokan() {
-        SeachServices.searchDuokan(keywords: searchTextField.text, sucessBlock: { (duokanbooks) -> () in
+        SearchService.searchDuokan(keywords: searchTextField.text, sucessBlock: { (duokanbooks) -> () in
             self.duokanBooks = duokanbooks
             self.searchAmazon()
         }) { (error) -> () in

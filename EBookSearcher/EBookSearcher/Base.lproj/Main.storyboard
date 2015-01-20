@@ -243,6 +243,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="113" y="42" width="191" height="41.5"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>

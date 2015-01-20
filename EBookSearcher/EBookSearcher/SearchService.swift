@@ -14,7 +14,7 @@ public typealias SearchDuokanSucessBlock = ([DuokanBookModel]) -> ()
 
 public typealias APIFailBlock = (NSError?) -> ()
 
-public class SeachServices: NSObject {
+public class SearchService: NSObject {
    
     public class func searchDouban(#keywords: NSString, sucessBlock: SearchDoubanSucessBlock?, failBlock: APIFailBlock?) {
         var url = "http://read.douban.com/j/search?start=0&limit=100"

@@ -16,7 +16,7 @@
 		3B78EFB71A5F6E8C0021D538 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78EFB51A5F6E8C0021D538 /* LaunchScreen.xib */; };
 		3B78EFC31A5F6E8C0021D538 /* EBookSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFC21A5F6E8C0021D538 /* EBookSearcherTests.swift */; };
 		3B78EFD81A5F707B0021D538 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B78EFD21A5F70360021D538 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3B78EFEE1A5F74350021D538 /* SeachServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFED1A5F74350021D538 /* SeachServices.swift */; };
+		3B78EFEE1A5F74350021D538 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFED1A5F74350021D538 /* SearchService.swift */; };
 		3B78EFF01A5F7AB60021D538 /* DoubanBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */; };
 		3B78EFF21A5F7B030021D538 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF11A5F7B030021D538 /* BaseModel.swift */; };
 		3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */; };
@@ -85,7 +85,7 @@
 		3B78EFC11A5F6E8C0021D538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B78EFC21A5F6E8C0021D538 /* EBookSearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBookSearcherTests.swift; sourceTree = "<group>"; };
 		3B78EFCC1A5F70360021D538 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		3B78EFED1A5F74350021D538 /* SeachServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachServices.swift; sourceTree = "<group>"; };
+		3B78EFED1A5F74350021D538 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		3B78EFEF1A5F7AB60021D538 /* DoubanBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubanBookModel.swift; sourceTree = "<group>"; };
 		3B78EFF11A5F7B030021D538 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		3B78EFF31A5FA54B0021D538 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
@@ -113,21 +113,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B18E5FF1A6E0D9C0030C46C /* category */ = {
+		3B18E5FF1A6E0D9C0030C46C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				3B18E5E41A6D41C20030C46C /* UIViewController+ProgressHUD.swift */,
 				3B18E5FD1A6E0D930030C46C /* UIImageView+URL.swift */,
 			);
-			name = category;
+			name = Extension;
 			sourceTree = "<group>";
 		};
-		3B18E6001A6E0E720030C46C /* dependencies */ = {
+		3B18E6001A6E0E720030C46C /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
 				3BC06E281A62AB15004FECBC /* SwiftyJSON.swift */,
 			);
-			name = dependencies;
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 		3B78EF9E1A5F6E8C0021D538 = {
@@ -152,8 +152,8 @@
 		3B78EFA91A5F6E8C0021D538 /* EBookSearcher */ = {
 			isa = PBXGroup;
 			children = (
-				3B18E6001A6E0E720030C46C /* dependencies */,
-				3B18E5FF1A6E0D9C0030C46C /* category */,
+				3B18E6001A6E0E720030C46C /* Dependencies */,
+				3B18E5FF1A6E0D9C0030C46C /* Extension */,
 				3B78F0051A5FCD090021D538 /* ViewControllers */,
 				3B78EFEC1A5F72CD0021D538 /* Model */,
 				3B78EFEB1A5F72C30021D538 /* Services */,
@@ -203,7 +203,7 @@
 		3B78EFEB1A5F72C30021D538 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3B78EFED1A5F74350021D538 /* SeachServices.swift */,
+				3B78EFED1A5F74350021D538 /* SearchService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 				3B18E5FE1A6E0D930030C46C /* UIImageView+URL.swift in Sources */,
 				3B78EFAD1A5F6E8C0021D538 /* AppDelegate.swift in Sources */,
 				3BC06E271A62AACF004FECBC /* DuokanBookModel.swift in Sources */,
-				3B78EFEE1A5F74350021D538 /* SeachServices.swift in Sources */,
+				3B78EFEE1A5F74350021D538 /* SearchService.swift in Sources */,
 				3B78F0041A5FCD020021D538 /* BookDetailViewController.swift in Sources */,
 				3B78EFF41A5FA54B0021D538 /* SearchResultViewController.swift in Sources */,
 				3B78EFF21A5F7B030021D538 /* BaseModel.swift in Sources */,
