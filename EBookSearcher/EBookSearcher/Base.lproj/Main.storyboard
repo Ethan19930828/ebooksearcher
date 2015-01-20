@@ -320,15 +320,15 @@
                                 <exclude reference="dKa-gi-BF7"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="TI4-aQ-N1S"/>
-                                <exclude reference="kjE-HI-xn1"/>
-                                <exclude reference="pzr-pt-vRg"/>
+                                <exclude reference="6MW-hR-0ey"/>
                                 <exclude reference="5AA-0J-HFM"/>
                                 <exclude reference="HaC-o6-3yW"/>
                                 <exclude reference="Zqu-YT-sbr"/>
                                 <exclude reference="aDE-kL-BHH"/>
                                 <exclude reference="tJQ-Zy-l9k"/>
-                                <exclude reference="6MW-hR-0ey"/>
+                                <exclude reference="TI4-aQ-N1S"/>
+                                <exclude reference="kjE-HI-xn1"/>
+                                <exclude reference="pzr-pt-vRg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -337,15 +337,15 @@
                                 <include reference="dKa-gi-BF7"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="TI4-aQ-N1S"/>
-                                <include reference="kjE-HI-xn1"/>
-                                <include reference="pzr-pt-vRg"/>
+                                <include reference="6MW-hR-0ey"/>
                                 <exclude reference="5AA-0J-HFM"/>
                                 <include reference="HaC-o6-3yW"/>
                                 <include reference="Zqu-YT-sbr"/>
                                 <exclude reference="aDE-kL-BHH"/>
                                 <include reference="tJQ-Zy-l9k"/>
-                                <include reference="6MW-hR-0ey"/>
+                                <include reference="TI4-aQ-N1S"/>
+                                <include reference="kjE-HI-xn1"/>
+                                <include reference="pzr-pt-vRg"/>
                             </mask>
                         </variation>
                     </view>
